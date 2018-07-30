@@ -62,6 +62,14 @@ describe('Test ObjectId()', function() {
         done();
     });
 
+    it('should convert a timestamp to a valid Id', function(done){
+        var id = new ObjectId(1532957209984);
+        var [seconds, microSeconds] = id.getTimeOfDay();
+        seconds.should.be.eql(1532957209);
+        microSeconds.should.be.eql(984000);
+        done();
+    });
+
     it('should throw on a bad encoding on toString()', function(done){
         var id = new ObjectId("USBVrAm4l52PoVEfAAA_");
 
@@ -124,7 +132,7 @@ describe('Test ObjectId()', function() {
 
     it('should fail on bad param', function(done){
         (function() {
-            var id = new ObjectId(512055);
+            var id = new ObjectId("undefined");
         }).should.throw();
         done();
     });
