@@ -55,10 +55,13 @@ ObjectId can be instanciated in several different ways:
     // Create an Object Id instance from existing Id encoded as base64 string
     var id = new ObjectId("USBVrAm4l52PoVEfAAAC");
 
+    // Create an Object Id instance from timestamp
+    var id = new ObjectId(1532957209984);
+
     // Create an Object Id instance from existing Node buffer
     var id = new ObjectId(buffer);
 
-Supported encodings are hex, base64 and base64url
+Supported encodings are hex, base64 and base64url or number for timestamps
 
 ## get()
 
