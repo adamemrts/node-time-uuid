@@ -5,7 +5,7 @@ REPORTER = dot
 test:
 	@echo Run make test-cov for coverage reports
 	@echo Mocha and Instanbul Node.js must be installed globally
-	@NODE_ENV=test mocha \
+	@NODE_ENV=test npx mocha \
 		-R $(REPORTER) \
 		$(TESTS)
 
