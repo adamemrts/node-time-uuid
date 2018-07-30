@@ -15,11 +15,14 @@
     },
     "readmeFilename": "README.md",
     "dependencies": {
-        "microtime" : ">=0.4.0",
-        "should"  : ""
+        "microtime": "^2.1.8"
     },
     "scripts": {
         "test": "make test",
         "cover": "make test-cov"
+    },
+    "devDependencies": {
+        "mocha": "^5.2.0",
+        "should": "^13.2.2"
     }
 }
